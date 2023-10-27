@@ -95,15 +95,15 @@ class ReportAnalysis extends React.Component<Props, State> {
       return value;
     }
     return this.ExcellentExport.convert(
-      { anchor: e.target, filename: "seatsurfing-analysis", format: "xlsx" },
-      [{ name: "Seatsurfing Analysis", from: { table: "datatable" }, fixValue: fixFn }]
+      { anchor: e.target, filename: "hotelstations-analysis", format: "xlsx" },
+      [{ name: "Hotel Stations Analysis", from: { table: "datatable" }, fixValue: fixFn }]
     );
   }
 
   render() {
     let searchButton = <Button className="btn-sm" variant="outline-secondary" type="submit" form="form"><IconSearch className="feather" /> {this.props.t("search")}</Button>;
     // eslint-disable-next-line
-    let downloadButton = <a download="seatsurfing-analysis.xlsx" href="#" className="btn btn-sm btn-outline-secondary" onClick={this.exportTable}><IconDownload className="feather" /> {this.props.t("download")}</a>;
+    let downloadButton = <a download="hotelstations-analysis.xlsx" href="#" className="btn btn-sm btn-outline-secondary" onClick={this.exportTable}><IconDownload className="feather" /> {this.props.t("download")}</a>;
     let buttons = (
       <>
         {this.data && this.data.users && this.data.dates && this.data.users.length > 0 && this.data.dates.length > 0 ? downloadButton : <></>}

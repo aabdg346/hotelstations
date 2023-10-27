@@ -61,8 +61,8 @@ class Locations extends React.Component<Props, State> {
 
   exportTable = (e: any) => {
     return this.ExcellentExport.convert(
-      { anchor: e.target, filename: "seatsurfing-areas", format: "xlsx" },
-      [{ name: "Seatsurfing Areas", from: { table: "datatable" } }]
+      { anchor: e.target, filename: "hotelstations-areas", format: "xlsx" },
+      [{ name: "Hotel Stations", from: { table: "datatable" } }]
     );
   }
 
@@ -73,7 +73,7 @@ class Locations extends React.Component<Props, State> {
     }
 
     // eslint-disable-next-line
-    let downloadButton = <a download="seatsurfing-areas.xlsx" href="#" className="btn btn-sm btn-outline-secondary" onClick={this.exportTable}><IconDownload className="feather" /> {this.props.t("download")}</a>;
+    let downloadButton = <a download="hotelstations-areas.xlsx" href="#" className="btn btn-sm btn-outline-secondary" onClick={this.exportTable}><IconDownload className="feather" /> {this.props.t("download")}</a>;
     let buttons = (
       <>
         {this.data && this.data.length > 0 ? downloadButton : <></>}
