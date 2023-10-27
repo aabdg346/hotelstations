@@ -205,12 +205,12 @@ class Preferences extends React.Component<Props, State> {
                 {this.locations.map(location => <option key={"location-" + location.id} value={location.id}>{location.name}</option>)}
               </Form.Select>
             </Form.Group>
-            <Form.Group className="margin-top-15">
+            {/* <Form.Group className="margin-top-15">
               <Form.Check type="checkbox" inline={true} id="check-changePassword" label={this.props.t("passwordChange")} checked={this.state.changePassword} onChange={(e: any) => this.setState({ changePassword: e.target.checked })} />
               <Form.Control type="password" value={this.state.password} onChange={(e: any) => this.setState({ password: e.target.value })} required={this.state.changePassword} disabled={!this.state.changePassword} minLength={8} />
-            </Form.Group>
+                </Form.Group> */}
             <Button className="margin-top-15" type="submit">{this.props.t("save")}</Button>
-          </Form>
+          </Form> 
         </div>
       </>
     );
