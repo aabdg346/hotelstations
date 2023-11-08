@@ -63,7 +63,7 @@ class Bookings extends React.Component<Props, State> {
     console.log(item.enter.toISOString());
     return (
       <ListGroup.Item key={item.id} action={true} onClick={(e) => { e.preventDefault(); this.onItemPress(item); }}>
-        <h5>{Formatting.getDateOffsetText(item.enter, item.leave)}</h5>
+       
         <p>
           <IconLocation className="feather" />&nbsp;{item.space.location.name}, {item.space.name}<br />
           <IconEnter className="feather" />&nbsp;{Formatting.getFormatter().format(item.enter)}<br />
